@@ -93,7 +93,8 @@ def predict(test_data, results, model_name):
     # Use our models to create predictions
     row, col = xt.shape
     model_parameters = model_params.ravel()
-    model_array = list((model_parameters for parameter in xrange(row)))
+    # Python 3: replace xrange with range
+    model_array = list((model_parameters for _ in range(row)))
     model_array = np.asarray(model_array)
 
     # Multiply matrix together

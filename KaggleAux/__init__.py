@@ -1,3 +1,3 @@
-import predict
+from . import predict
 
 __all__ = ['predict']
